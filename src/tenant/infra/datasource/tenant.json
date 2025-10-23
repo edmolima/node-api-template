@@ -1,0 +1,36 @@
+{
+  "id": "1a2b3c4d-tenant",
+  "name": "Cliente Alpha",
+  "description": "Tenant para cliente Alpha",
+  "config": {
+    "subscriptionPlan": "premium",
+    "region": "sa-east-1",
+    "lakePaths": {
+      "bronze": "s3://dataqore/tenants/1a2b3c4d/bronze/",
+      "silver": "s3://dataqore/tenants/1a2b3c4d/silver/",
+      "gold": "s3://dataqore/tenants/1a2b3c4d/gold/"
+    }
+  },
+  "users": [
+    {
+      "id": "user123",
+      "name": "João Silva",
+      "email": "joao.silva@clientealpha.com",
+      "roles": [
+        { "id": "role1", "name": "admin" },
+        { "id": "role2", "name": "data_analyst" }
+      ],
+      "isActive": true
+    },
+    {
+      "id": "user124",
+      "name": "Maria Oliveira",
+      "email": "maria.oliveira@clientealpha.com",
+      "roles": [{ "id": "role3", "name": "viewer" }],
+      "isActive": true
+    }
+  ],
+  "isActive": true,
+  "createdAt": "2025-10-23T16:53:00.000Z",
+  "updatedAt": "2025-10-23T16:53:00.000Z"
+}

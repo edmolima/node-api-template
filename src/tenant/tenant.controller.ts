@@ -1,4 +1,5 @@
-import { Controller, Delete, Get, Patch, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Patch, Post } from '@nestjs/common';
+import { CreateTenantDto } from './dto/create-tenant.dto';
 import { TenantService } from './tenant.service';
 
 @Controller('tenant')
@@ -11,16 +12,20 @@ export class TenantController {
   }
 
   @Post()
-  createTenant() {
-    return this.tenantService.createTenant();
+  createTenant(@Body() createTenantDto: CreateTenantDto) {
+    const newTenant = {
+      ...createTenantDto,
+    };
+
+    return this.tenantService.createTenant(newTenant);
   }
 
-  @Patch()
+  @Patch(':id')
   updateTenant() {
     return this.tenantService.editTenant();
   }
 
-  @Delete()
+  @Delete(':id')
   removeTenant() {
     return this.tenantService.removeTenant();
   }
