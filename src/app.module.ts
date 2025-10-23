@@ -6,11 +6,11 @@ import { EtlModule } from './etl/etl.module';
 import { InsightsModule } from './insights/insights.module';
 import { IntelligenceModule } from './intelligence/intelligence.module';
 import { LakeModule } from './lake/lake.module';
-import { TenancyModule } from './tenancy/tenancy.module';
+import { TenantModule } from './tenant/tenant.module';
 
 @Module({
   imports: [
-    TenancyModule,
+    TenantModule,
     LakeModule,
     InsightsModule,
     IntelligenceModule,
