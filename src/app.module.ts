@@ -8,9 +8,10 @@ import { IntelligenceModule } from './intelligence/intelligence.module';
 import { EtlModule } from './etl/etl.module';
 import { CommonModule } from './common/common.module';
 import { DatabaseModule } from './database/database.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
-  imports: [TenancyModule, LakeModule, InsightsModule, IntelligenceModule, EtlModule, CommonModule, DatabaseModule],
+  imports: [TenancyModule, LakeModule, InsightsModule, IntelligenceModule, EtlModule, CommonModule, DatabaseModule, AuthModule],
   controllers: [AppController],
   providers: [AppService],
 })
