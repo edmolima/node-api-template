@@ -22,4 +22,25 @@ describe('TenantModule (e2e)', () => {
       .expect(200)
       .expect('Edmo');
   });
+
+  it('/tenant (POST)', () => {
+    return request(app.getHttpServer())
+      .post('/tenant')
+      .expect(201)
+      .expect('Edmo');
+  });
+
+  it('/tenant (PATCH)', () => {
+    return request(app.getHttpServer())
+      .patch('/tenant')
+      .expect(200)
+      .expect('Edmo');
+  });
+
+  it('/tenant (DELETE)', () => {
+    return request(app.getHttpServer())
+      .delete('/tenant')
+      .expect(200)
+      .expect('Edmo');
+  });
 });

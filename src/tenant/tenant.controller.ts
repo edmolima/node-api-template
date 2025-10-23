@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Delete, Get, Patch, Post } from '@nestjs/common';
 import { TenantService } from './tenant.service';
 
 @Controller('tenant')
@@ -7,6 +7,21 @@ export class TenantController {
 
   @Get()
   listAll() {
-    return this.tenantService.listAllTenant();
+    return this.tenantService.findAllTenant();
+  }
+
+  @Post()
+  createTenant() {
+    return this.tenantService.createTenant();
+  }
+
+  @Patch()
+  updateTenant() {
+    return this.tenantService.editTenant();
+  }
+
+  @Delete()
+  removeTenant() {
+    return this.tenantService.removeTenant();
   }
 }

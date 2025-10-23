@@ -4,9 +4,15 @@ import { Injectable } from '@nestjs/common';
 export class TenantRepository {
   constructor() {}
 
-  create() {}
-  update() {}
-  remove() {}
+  create() {
+    return 'Edmo';
+  }
+  update() {
+    return 'Edmo';
+  }
+  remove() {
+    return 'Edmo';
+  }
 
   findAll() {
     return 'Edmo';
